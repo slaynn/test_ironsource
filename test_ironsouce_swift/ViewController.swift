@@ -7,7 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, ISRewardedVideoDelegate {
+class ViewController: UIViewController {
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        IronSource.initWithAppKey("b6bd7235")
+        ISIntegrationHelper.validateIntegration()
+    }
+    
+    func displayVideo(){
+        NSLog("trigger displayVideo")
+        
+        IronSource.setRewardedVideoDelegate(self)
+    }
+
+    @IBAction func buttonClick(_ sender: Any) {
+        displayVideo();
+    }
+    
+}
+extension ViewController:ISRewardedVideoDelegate{
     func rewardedVideoHasChangedAvailability(_ available: Bool) {
         //
     }
@@ -18,6 +40,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate {
     
     func rewardedVideoDidFailToShowWithError(_ error: Error!) {
         //
+        NSLog("erreur chargement video")
     }
     
     func rewardedVideoDidOpen() {
@@ -39,21 +62,5 @@ class ViewController: UIViewController, ISRewardedVideoDelegate {
     func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {
         //
     }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    func displayVideo(){
-        NSLog("trigger displayVideo")
-        IronSource.setRewardedVideoDelegate(self)
-    }
-
-    @IBAction func buttonClick(_ sender: Any) {
-        displayVideo();
-    }
-    
 }
 
