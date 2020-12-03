@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     }
     
     func displayInterstitial(){
-        NSLog("trigger displayIntestitial %@", IronSource.hasInterstitial())
         IronSource.showInterstitial(with: self)
     }
 

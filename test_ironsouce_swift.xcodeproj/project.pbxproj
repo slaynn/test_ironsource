@@ -13,11 +13,12 @@
 		F5085876257800DF009FEA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5085874257800DF009FEA35 /* Main.storyboard */; };
 		F5085878257800E0009FEA35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5085877257800E0009FEA35 /* Assets.xcassets */; };
 		F508587B257800E0009FEA35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5085879257800E0009FEA35 /* LaunchScreen.storyboard */; };
-		F508588425780140009FEA35 /* IronSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F508588325780140009FEA35 /* IronSource.framework */; };
 		F50858882578016E009FEA35 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = F50858872578016E009FEA35 /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47BFEB10595061CBC860FDD1 /* Pods-test_ironsouce_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_ironsouce_swift.release.xcconfig"; path = "Target Support Files/Pods-test_ironsouce_swift/Pods-test_ironsouce_swift.release.xcconfig"; sourceTree = "<group>"; };
+		AFF4E48D685013BA4180D014 /* Pods-test_ironsouce_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_ironsouce_swift.debug.xcconfig"; path = "Target Support Files/Pods-test_ironsouce_swift/Pods-test_ironsouce_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		F508586B257800DF009FEA35 /* test_ironsouce_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_ironsouce_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508586E257800DF009FEA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5085870257800DF009FEA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		F5085877257800E0009FEA35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508587A257800E0009FEA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508587C257800E0009FEA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F508588325780140009FEA35 /* IronSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IronSource.framework; sourceTree = "<group>"; };
 		F50858862578016D009FEA35 /* test_ironsouce_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_ironsouce_swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		F50858872578016E009FEA35 /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,18 +36,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F508588425780140009FEA35 /* IronSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A416864AD2228DAD718DA1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4E48D685013BA4180D014 /* Pods-test_ironsouce_swift.debug.xcconfig */,
+				47BFEB10595061CBC860FDD1 /* Pods-test_ironsouce_swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F5085862257800DF009FEA35 = {
 			isa = PBXGroup;
 			children = (
 				F508586D257800DF009FEA35 /* test_ironsouce_swift */,
 				F508586C257800DF009FEA35 /* Products */,
+				6A416864AD2228DAD718DA1D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,7 +78,6 @@
 				F5085877257800E0009FEA35 /* Assets.xcassets */,
 				F5085879257800E0009FEA35 /* LaunchScreen.storyboard */,
 				F508587C257800E0009FEA35 /* Info.plist */,
-				F508588325780140009FEA35 /* IronSource.framework */,
 				F50858872578016E009FEA35 /* test.m */,
 				F50858862578016D009FEA35 /* test_ironsouce_swift-Bridging-Header.h */,
 			);
@@ -83,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F508587F257800E0009FEA35 /* Build configuration list for PBXNativeTarget "test_ironsouce_swift" */;
 			buildPhases = (
+				B646612914FB6581822C7048 /* [CP] Check Pods Manifest.lock */,
 				F5085867257800DF009FEA35 /* Sources */,
 				F5085868257800DF009FEA35 /* Frameworks */,
 				F5085869257800DF009FEA35 /* Resources */,
@@ -141,6 +150,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B646612914FB6581822C7048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test_ironsouce_swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5085867257800DF009FEA35 /* Sources */ = {
@@ -294,6 +328,7 @@
 		};
 		F5085880257800E0009FEA35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF4E48D685013BA4180D014 /* Pods-test_ironsouce_swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,7 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombolapp.test-ironsouce-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = test_ironsouce_swift/IronSource.framework/Headers/IronSource.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Pods/IronSourceSDK/IronSource/IronSource.framework/Headers/IronSource.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,6 +355,7 @@
 		};
 		F5085881257800E0009FEA35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BFEB10595061CBC860FDD1 /* Pods-test_ironsouce_swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,7 +373,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombolapp.test-ironsouce-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = test_ironsouce_swift/IronSource.framework/Headers/IronSource.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Pods/IronSourceSDK/IronSource/IronSource.framework/Headers/IronSource.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
